@@ -29,7 +29,7 @@ import java.util.ServiceLoader;
  */
 public interface CatPropertyProvider {
 	
-	public static final CatPropertyProvider INST = ServiceLoader.load(CatPropertyProvider.class).iterator().next();
+	CatPropertyProvider INST = ServiceLoader.load(CatPropertyProvider.class).iterator().next();
 
-	public String getProperty(String name, String defaultValue);
+	String getProperty(String name, String defaultValue);
 }
